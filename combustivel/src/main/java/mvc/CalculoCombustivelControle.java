@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "combustivel", urlPatterns = {"/combustivel"})
+
 public class CalculoCombustivelControle extends HttpServlet{
     
     protected void doPost(HttpServletRequest request , HttpServletResponse response) 
@@ -28,7 +28,7 @@ public class CalculoCombustivelControle extends HttpServlet{
         request.setAttribute("calcular_combustivel", calcular_combustivel);
         request.setAttribute("mais_vantajoso", mais_vantajoso);
         
-        request.getRequestDispatcher("mvc/Calcularcombustivel.jsp").forward(request, response);
+        request.getRequestDispatcher("jsp/Calcularcombustivel.jsp").forward(request, response);
     
     }
     
