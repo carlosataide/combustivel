@@ -4,7 +4,65 @@
         <title>Cálculo do Combustível</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
+    <style type="text/css">
+        body {
+            background: url("imagem/postoCombustivel.jpg"); 
+        }
+        
+        form {
+            width: 210px;
+            margin: auto;
+        }
+        
+        input, textarea {
+            font-family: arial;
+            font-weight: normal;
+            font-size: 12pt;
+            background-color: rgba(255,255,255,0.8);
+        }
+
+        input:hover, textarea:hover {
+            background-color: #dddddd;
+        }
+        
+        label{
+            font-family: Arial;
+        }
+        
+        div#interface {
+            width: 200px;
+            background-color: #FFFFFF;
+            margin: 150px auto 0px auto;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+            padding: 10px;
+        }
+        
+        legend {
+            color: #888888;
+            font-weight: bold;
+            font-size: 13pt;
+            font-family: sans-serif;
+        }
+        
+        fieldset {
+            border-color: #cecece;
+            margin: 20px;
+        }
+        
+    </style>
+    
     <body>
+        <div id="interface">
+        <form action="imc" method="POST">
+            <fieldset>
+                <legend>Calculo do IMC</legend>
+                <p><label>Altura</label> <input type="text" size="10" name="altura" placeholder="Altura"><br><br></p>
+                <p><label>Peso</label> <input type="text" size="10" name="peso" placeholder="Peso"><br><br></p>
+                <input type="submit" value="Calcular"><br><br>
+            </fieldset>
+        </form>
+        </div>
+    <body> 
         <h1>Cálculo do Combustível</h1>
     </body>
 </html>
