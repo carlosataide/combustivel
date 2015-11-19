@@ -28,7 +28,7 @@ public class CalculoCombustivelControle extends HttpServlet{
         request.setAttribute("calcular_combustivel", calcular_combustivel);
         request.setAttribute("mais_vantajoso", mais_vantajoso);
         
-        request.getRequestDispatcher("mvc/combustivel.jsp").forward(request, response);
+        request.getRequestDispatcher("mvc/Calcularcombustivel.jsp").forward(request, response);
     
     }
     

@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Resultado</title>
     </head>
     <style type="text/css">
         
@@ -47,9 +47,9 @@
     </style>
     <body>
         <div id="interface">
-        <h1>Resultado do IMC</h1>
+        <h1>Mais Vantajoso</h1>
         <form>
-            <label>Mais vantajoso</label>
+            <label>Valor do Combustível:</label>
             <input type="text" size="10" value="<%= request.getAttribute("calcular_combustivel")%>"<br><br><br>
             <label>Status:</label>
             <input type="text" size="42" value="<%= request.getAttribute("mais_vantajoso")%>"<br><br><br>
