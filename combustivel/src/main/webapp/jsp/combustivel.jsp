@@ -49,10 +49,10 @@
         <div id="interface">
         <h1>Resultado do IMC</h1>
         <form>
-            <label>Valor do IMC:</label>
-            <input type="text" size="10" value="<%= request.getAttribute("imc")%>"<br><br><br>
+            <label>Mais vantajoso</label>
+            <input type="text" size="10" value="<%= request.getAttribute("calcular_combustivel")%>"<br><br><br>
             <label>Status:</label>
-            <input type="text" size="42" value="<%= request.getAttribute("status")%>"<br><br><br>
+            <input type="text" size="42" value="<%= request.getAttribute("mais_vantajoso")%>"<br><br><br>
 
             <input type="button" value="retornar" onclick="history.back()">
         </form> 
