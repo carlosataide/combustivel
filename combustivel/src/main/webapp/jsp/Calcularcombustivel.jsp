@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Resultado</title>
+        <title>Calcular Combustível</title>
     </head>
     <style type="text/css">
         
@@ -47,11 +47,11 @@
     </style>
     <body>
         <div id="interface">
-        <h1>Mais Vantajoso</h1>
+        <h1>Resultado do cálculo do combustível</h1>
         <form>
             <label>Valor do Combustível:</label>
             <input type="text" size="10" value="<%= request.getAttribute("calcular_combustivel")%>"<br><br><br>
-            <label>Status:</label>
+            <label>Mais Vantajoso:</label>
             <input type="text" size="42" value="<%= request.getAttribute("mais_vantajoso")%>"<br><br><br>
 
             <input type="button" value="retornar" onclick="history.back()">
