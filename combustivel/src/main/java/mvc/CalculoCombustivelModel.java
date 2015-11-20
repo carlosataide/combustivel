@@ -2,9 +2,10 @@
 package mvc;
 
 public class CalculoCombustivelModel {
-     public float preco_alcool;
-     public float preco_gasolina;
-     public float calcular_combustivel;
+     private float preco_alcool;
+     private float preco_gasolina;
+     private float calcular_combustivel;
+     private String mais_vantajoso;
     
     
     public float getPreco_alcool(){
@@ -30,4 +31,15 @@ public class CalculoCombustivelModel {
     public void setCalcular_combustivel(float calcular_combustivel) {
         this.calcular_combustivel = calcular_combustivel;
     }
+    
+    public void calcularCombustivel(){
+        float calcular_combustivel = preco_alcool / preco_gasolina;
+    }
+    
+    public void calcularResultado() {
+    if(calcular_combustivel < 0.7)
+           mais_vantajoso = "Mais vantajoso abastecer álcool";
+        else
+            mais_vantajoso = "Mais vantajoso abastecer gasolina";
+  }
 }

@@ -16,17 +16,16 @@ public class CalculoCombustivelControle extends HttpServlet{
         
         float preco_alcool = Float.parseFloat(request.getParameter("preco_alcool"));
         float preco_gasolina = Float.parseFloat(request.getParameter("preco_gasolina"));
+         
         
-        float calcular_combustivel = preco_alcool / preco_gasolina;
-        String mais_vantajoso = null;
+        CalculoCombustivelModel cCombustivel = new CalculoCombustivelModel();
+        cCombustivel.setPreco_alcool(preco_alcool);
+        cCombustivel.setPreco_gasolina(preco_gasolina);
+        cCombustivel.calcularCombustivel();
+        cCombustivel.calcularResultado();
         
-        if(calcular_combustivel < 0.7)
-           mais_vantajoso = "Mais vantajoso abastecer álcool";
-        else
-            mais_vantajoso = "Mais vantajoso abastecer gasolina";
-        
-        request.setAttribute("calcular_combustivel", calcular_combustivel);
-        request.setAttribute("mais_vantajoso", mais_vantajoso);
+        request.setAttribute("calcular_combustivel", cCombustivel);
+        request.setAttribute("mais_vantajoso", cCombustivel);
         
         request.getRequestDispatcher("jsp/Calcularcombustivel.jsp").forward(request, response);
     
